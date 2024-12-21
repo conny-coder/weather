@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/favicon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+
+  <body>
+    <div class="overflow">
+      <div class="overflow__input">
+        <input id="city" placeholder="Name of the place" type="text" />
+      </div>
+      <div class="overflow__spinner-container">
+        <div class="overflow__spinner"></div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <div class="header__left">
+              <div class="search-input">
+                <input placeholder="Search City" type="text" />
+                <img src="./images/search.svg" width="12" alt="" />
+              </div>
+
+              <button class="header__desktop-button">
+                <img width="25" src="./images/history.svg" alt="history" />
+              </button>
+              <button hidden class="header__mobile-button">
+                <span></span><span></span><span></span>
+              </button>
+            </div>
+
+            <p class="header__date"></p>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="top">
+          <div class="container">
+            <div class="top__inner">
+              <div class="top__info">
+                <p class="top__location">
+                  <span
+                    ><img src="./images/location.svg" width="20" alt=""
+                  /></span>
+                  <span class="top__location-name"></span>
+                </p>
+
+                <p class="top__time"></p>
+              </div>
+              <div class="top__weather">
+                <div>
+                  <p class="top__temperature"><span></span>°C</p>
+                  <p class="top__weather-type"></p>
+                </div>
+                <div>
+                  <img class="top__image bright" src="" width="100" alt="" />
+                </div>
+              </div>
+              <div class="top__indicators">
+                <div class="top__indicators-item">
+                  <div class="top__indicators-img">
+                    <img src="./images/thermometer.svg" width="30" alt="" />
+                  </div>
+                  <div class="top__indicators-num">
+                    <span class="top__indicators_temperature"></span>°C
+                  </div>
+                  <div class="top__indicators-text">Temperature</div>
+                </div>
+                <div class="top__indicators-item">
+                  <div class="top__indicators-img">
+                    <img src="./images/wind.svg" width="30" alt="" />
+                  </div>
+                  <div class="top__indicators-num">
+                    <span class="top__indicators_wind"></span>Km/h
+                  </div>
+                  <div class="top__indicators-text">Wind</div>
+                </div>
+                <div class="top__indicators-item">
+                  <div class="top__indicators-img">
+                    <img src="./images/humidity.svg" width="30" alt="" />
+                  </div>
+                  <div class="top__indicators-num">
+                    <span class="top__indicators_humidity"></span>%
+                  </div>
+                  <div class="top__indicators-text">Humidity</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="hourly">
+          <div class="container">
+            <div class="hourly__scroll">
+              <button class="hourly__scroll-prev inactive">
+                <svg
+                  fill="#ffffff"
+                  height="13px"
+                  width="13px"
+                  version="1.1"
+                  id="XMLID_287_"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 24 24"
+                  xml:space="preserve"
+                >
+                  <g id="next">
+                    <g>
+                      <polygon
+                        points="6.8,23.7 5.4,22.3 15.7,12 5.4,1.7 6.8,0.3 18.5,12 		"
+                      />
+                    </g>
+                  </g>
+                </svg>
+                Prev day
+              </button>
+              <button class="hourly__scroll-next">
+                Next day
+                <svg
+                  fill="#ffffff"
+                  height="13px"
+                  width="13px"
+                  version="1.1"
+                  id="XMLID_287_"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 24 24"
+                  xml:space="preserve"
+                >
+                  <g id="next">
+                    <g>
+                      <polygon
+                        points="6.8,23.7 5.4,22.3 15.7,12 5.4,1.7 6.8,0.3 18.5,12 		"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="hourly__list-box">
+            <ul class="hourly__list"></ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        Created by
+        <a target="_blank" href="https://portfolio-conny.vercel.app/"
+          ><b>@conny</b></a
+        >
+      </footer>
+    </div>
+
+    <div class="history">
+      <div class="history__actions">
+        <button class="history__close">
+          <img width="30" src="./images/close-button.svg" alt="close" />
+        </button>
+      </div>
+
+      <ul class="history__list"></ul>
+      <button class="history__clear">Clear history</button>
+    </div>
+
+    <script src="js/main.min.js" type="module"></script>
+  </body>
+</html>
