@@ -1,0 +1,45 @@
+html,
+body {
+	height: 100vh;
+	overflow: hidden;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #fff;
+}
+
+.wrapper {
+	background: url("../images/background.jpg") center / cover;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	visibility: hidden;
+	transition: visibility 0.3s;
+
+	&.show {
+		visibility: visible;
+	}
+}
+
+button {
+	font-family: inherit;
+	background: transparent;
+	outline: none;
+	border: none;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
